@@ -1,0 +1,458 @@
+/* Cài đặt chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F5F5F5; /* Màu nền xám nhạt */
+}
+
+header {
+    background-color: #007bff; /* Màu xanh đậm (Blue color) */
+    color: rgb(3, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-image: url('images/hinhnen.jpg'); /* Path to your background image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    color: orange; /* Màu chữ nổi bật */
+    font-family: 'Pacifico', cursive; /* Font chữ kiểu viết tay */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Bóng chữ để làm nổi bật */
+    letter-spacing: 1px; /* Khoảng cách giữa các ký tự */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar li a:hover {
+    background-color: #FF8C00; /* Màu cam nhạt khi hover */
+}
+
+main {
+    padding: 20px;
+}
+
+/* Phần tìm kiếm */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FF8C00; /* Màu cam */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #FFA500;
+}
+
+/* Nút sắp xếp theo tên */
+#sort-btn {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#sort-btn:hover {
+    background-color: #FFA500;
+    transform: scale(1.05);
+}
+
+/* Phần danh sách sinh viên */
+.student-list {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1E90FF;
+    color: white;
+}
+
+/* Phần thêm sinh viên */
+.add-student {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="date"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #FFA500;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    clear: both;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-right {
+    width: 45%;
+}
+
+.footer-left h3, .footer-right h3 {
+    margin-top: 0;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer-right ul li a img {
+    width: 24px; /* Điều chỉnh kích thước hình ảnh */
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-right ul li a span {
+    font-size: 14px; /* Điều chỉnh kích thước văn bản nếu cần */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-right ul {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+/* Responsive Design */
+
+/* For screens 320px wide */
+@media (max-width: 320px) {
+    header {
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .navbar li a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #search-input {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    #search-btn {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    .add-student {
+        padding: 15px;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-right ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .footer-right ul li a {
+        font-size: 0.9em;
+    }
+
+   
+}
+
+/* For screens 480px wide */
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar li a {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #search-input {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    #search-btn {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    table {
+        font-size: 1em;
+    }
+
+    .add-student {
+        padding: 20px;
+    }
+
+    button[type="submit"] {
+        font-size: 1em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-right ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .footer-right ul li a {
+        font-size: 1em;
+    }
+
+   
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar li a {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #search-input {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    #search-btn {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    table {
+        font-size: 1.1em;
+    }
+
+    .add-student {
+        padding: 25px;
+    }
+
+    button[type="submit"] {
+        font-size: 1.1em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-right ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .footer-right ul li a {
+        font-size: 1.1em;
+    }
+
+   
+}
+
